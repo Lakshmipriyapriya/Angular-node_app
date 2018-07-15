@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html ng-app="jobsList">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>My Tasks</title>
+
+	
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	
+	<style>
+		#task-list 				{ margin-bottom:50px; }
+		#task-form 	 			{ margin-bottom:50px; }
+	</style>
+
+	<script src="libs/angular.min.js"></script>
+
+	<script src="js/controllers/tasks_controllers.js"></script> 
+	<script src="js/services/task_services.js"></script> 
+	<script src="js/inclusions.js"></script> 
+
+</head>
+
+<body ng-controller="mainController">
+	<div class="container">
+		<div class="hero-unit text-center">
+
+					<h3>My task list</h3>
+		
+		<div id="tasks-list" class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				
+				</div>
+
+				<p class="text-center" ng-show="loading">
+					<span class="fa fa-spinner fa-spin fa-3x"></span>
+				</p>
+
+			
+		</div>
+		<div id="task-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center" placeholder="Title" ng-model="formData.text"><br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Description" ng-model="formData.text"><br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Owner" ng-model="formData.text"><br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Status" ng-model="formData.text"><br>
+						<input type="text" class="form-control input-lg text-center" placeholder="applicationId" ng-model="formData.text">
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createtasks()">Add</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

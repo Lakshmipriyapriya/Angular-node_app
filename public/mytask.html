@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+        <head>
+	           <title> MY  TASKS LIST</title>
+                          	 <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+                            <link rel="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css">
+                            <script src="./bootstrap/js/jquery.min.js"></script>
+                          	 <script src="./bootstrap/js/bootstrap.js"></script>
+        </head>
+  <body>
+  <div class="container">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">         
+               <div class="nav-collapse collapse">
+            <ul class="nav">
+                 <li><a class="logo" href="#"> <img src="./logo/logo-design.jpg" style="max-width:60px; margin-top:-20px; padding-right:40px;"> </a></li>
+             <li> <a href="#myModal" role="text" class="text"  data-toggle="modal">Login</a></li>
+  <li> <a href="#mineModal" role="text" class="text" data-toggle="modal">Sign in</a></li>
+   <li><a href="#TaskModal" role="text" class="text" data-toggle="modal">Task</a></li>
+   <div class="container">
+   <div class="navbar pull-right">
+     <li> <a href="#tasksModal" role="button" class="btn"  data-toggle="modal">+</a></li>
+ </div>
+</ul>
+    </div>
+ </div>
+        </div>
+        </div>
+        </div>
+     <div class="text-center">
+     	<div class="container">
+     		<div class="span12">
+     			<div class="hero-unit">
+           
+     	<h1>My Tasks!</h1><br>
+       <p>please login to enter tasks list </p>
+    <div class="container-fluid">
+     <div class="pagination">
+      <ul>
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+       <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+      </div>
+     </div>
+   </div>
+</div>
+</div>
+</div>
+</ul>
+<div id="myModal" class="modal  fade" id="modaldata1" tabindex="-1" role="dialog" aria-labelledby="Provide details to Login" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Login</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="Email address" required="Email"><br>
+      <input type="Password" placeholder="Password" ><br><br>
+      <input type="checkbox" class ="checkbox">Remember me<br>
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Login</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">cancle</button>
+  </div>
+  <script>
+$(document).ready(function(){
+    $("#mymodel").click(function(){
+        $("modeldata1").modal();
+    });
+});
+</script>
+</div>
+<div id="mineModal" class="modal fade" id="minedata" href="#" tabindex="-1" role="dialog" aria-labelledby="Provide details to Login" aria-hidden="true">
+  <div class="modal-header">
+    <h3 id="myModalLabel">Sign in</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="FirstName"><br>
+      <input type="text" placeholder="LastName"><br>
+      <input type="text" placeholder="Email address" required="Email"><br>
+      <input type="Password" placeholder="Password" ><br><br>
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Sign in</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">cancle</button>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("mineModal").click(function(){
+        $("minedata").modal();
+      });
+    });
+  </script>
+</div>
+<div id="TaskModal" class="modal  fade" id="modaldatas" href="#" tabindex="-1" role="dialog" aria-labelledby="Provide details to Addtask details" aria-hidden="true">
+  <div class="modal-header">
+    <h3 id="myModalLabel">Add Tasks</h3>
+  </div>
+  <div class="modal-body">
+       <class="check-box">
+      <input type="checkbox">
+      Task1
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task2
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task3
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task4
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task5
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Add Task</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Remove</button>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $("#TaskModal").click(function(){
+        $("modaldatas").modal();
+      });
+    });
+  </script>
+ </div>
+ <div id="tasksModal" class="modal  fade" id="adddetails" herf="#" tabindex="-1" role="dialog" aria-labelledby="Provide details to tasks" aria-hidden="true">
+  <div class="modal-header">
+    <h3 id="myModalLabel">Task list</h3>
+  </div>
+  <div class="modal-body">
+     <input type="text" placeholder="Title"><br>
+      <input type="text" placeholder="Description" ><br>
+      <input type="text" placeholder="Owner" ><br>
+      <input type="text" placeholder="Status" ><br>
+      <input type="text" placeholder="ApplicationId" ><br>
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Add</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">cancle</button>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $("#tasksModal").click(function(){
+        $("adddetails").modal();
+      });
+    });
+</script>
+</div>
+</body>
+</html>
